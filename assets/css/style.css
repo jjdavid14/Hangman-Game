@@ -1,0 +1,45 @@
+body {
+	background-image: url(../images/background.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+* {
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.header {
+	background-image: url(../images/header.png);
+	background-position: center;
+	background-size: cover;
+	border-bottom: 2px solid black;
+	border-radius: 30px
+}
+
+.content {
+	background-color: #eee;
+}
+
+.current-game {
+	height: 210px;
+}
+
+.bg-white {
+	border-top: 5px solid #ccc;
+}
+
+#lettersToGuess, i {
+	font-size: 36px!important;
+}
+
+.letters-guessed {
+	margin: 0 5px;
+}
+
+.guesses-remaining.text-danger {
+	font-size: 1.5rem;
+}
+
+.songs-button {
+	background-color: #9999FF;
+}

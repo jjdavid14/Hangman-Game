@@ -3,9 +3,92 @@
 <head>
 	<meta charset="utf-8">
 	<title>Hangman Game</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<!-- Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Animate CSS -->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
+	<!-- Start Container -->
+	<div class="container">
+		<!-- Header Row -->
+		<div class="row mb-2">
+			<div class="header col-12 bg-info py-3">
+				<h1 class="text-center text-white">Hangman Dog Breeds</h1>
+			</div>
+		</div>
+		<!-- END Header Row -->
+		<!-- Start Content Row -->
+		<div class="row">
+			<div class="content col-10 mx-auto">
+				<h2 class="text-center mt-2">Guess the Word!</h2>
+				<!-- Letters to Guess -->
+				<div class="row">
+					<p id="lettersToGuess" class="mx-auto mt-5"></p>
+				</div>
+				<div class="row mt-3 current-game">
+					<!-- Info on Current Game -->
+					<div class="col-6 bg-white h-100 pt-3">
+						<!-- Guesses Remaining -->
+						<p class="guesses-remaining text-center">Guesses Remaining: <span id="guessesRemaining"></span></p>
+						<!-- Letters Guessed -->
+						<div id="lettersGuessed"></div>
+					</div>
+					<!-- Overall Stats -->
+					<div class="col-6 bg-white h-100">
+						<h4 class="pt-3 text-center pb-4">Your Stats</h4>
+						<h5 class="text-center" id="stats"></h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END Content Row -->
+		<!-- Song Buttons Row -->
+		<div class="row">
+			<div class="songs-button col-10 mx-auto text-center py-3 border">
+				<button class="p-2" id="playSong">Play Song</button>
+				<button class="p-2" id="pauseSong">Pause Song</button>
+			</div>
+		</div>
+		<!-- END Song Buttons Row -->
+		<!-- Start Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalTitle">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body text-center" id="modalBody">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END Modal -->
+	</div>
+	<!-- END Container -->
 
-<script type="text/javascript" src="assets/javascript/game.js"></script>	
+	<audio id="audio" src="assets/sounds/woof.mp3" autostart="false" ></audio>
+	<audio id="song" src="assets/sounds/songs.mp3" autostart="false"></audio>
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<!-- game.js -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
